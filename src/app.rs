@@ -3,9 +3,9 @@
 // Released under the MIT license.
 // see https://opensource.org/licenses/mit-license.php
 
-use anyhow::Result;
-use triversi::cli::Cli;
+pub mod key_binding;
+pub mod system;
+pub mod tui;
 
-fn main() -> Result<()> {
-    Cli::run()
-}
+pub use self::tui::Tui;
+pub use system::{Status, System};
